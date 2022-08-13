@@ -1,8 +1,8 @@
-# All non experimental molang queries
+# All non-experimental molang queries
 
 | Name | Description |
 | ---  | ----------- |
-query.above_top_solid | Returns the height of the block immediately above the highest solid block at the input (x,z) position.
+query.above_top_solid | Returns the height of the block immediately above the highest solid block at the input (x, z) position.
 query.actor_count | Returns the number of actors rendered in the last frame.
 query.all | Requires at least 3 arguments. Evaluates the first argument, then returns 1.0 if all of the following arguments evaluate to the same value as the first. Otherwise it returns 0.0.
 query.all_animations_finished | Only valid in an animation controller. Returns 1.0 if all animations in the current animation controller state have played through at least once, else it returns 0.0.
@@ -17,7 +17,7 @@ query.armor_color_slot | Takes the armor slot index as a parameter and returns t
 query.armor_material_slot | Takes the armor slot index as a parameter and returns the armor material type in the requested armor slot.
 query.armor_texture_slot | Takes the armor slot index as a parameter and returns the texture type of the requested slot.
 query.average_frame_time | Returns the time in seconds of the average frame time over the last 'n' frames. If an argument is passed, it is assumed to be the number of frames in the past that you wish to query. 'query.average_frame_time' (or the equivalent 'query.average_frame_time(0)') will return the frame time of the frame before the current one. 'query.average_frame_time(1)' will return the average frame time of the previous two frames. Currently we store the history of the last 30 frames, although note that this may change in the future. Asking for more frames will result in only sampling the number of frames stored.
-query.block_face | Returns the block face for this (only valid for certain triggers such as placing blocks, or interacting with block) (Down=0.0, Up=1.0, North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0)
+query.block_face | Returns the block face for this (only valid for certain triggers such as placing blocks, or interacting with block) (Down=0.0, Up=1.0, North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).
 query.block_property | Returns the value of the associated block's Block State.
 query.blocking | Returns 1.0 if the entity is blocking, else it returns 0.0.
 query.body_x_rotation | Returns the body pitch rotation if called on an actor, else it returns 0.0.
@@ -44,13 +44,13 @@ query.current_squish_value | Returns the squish value for the current entity, or
 query.day | Returns the day of the current level.
 query.death_ticks | Returns the elapsed ticks since the mob started dying.
 query.debug_output | Debug log a value to the output debug window for builds that have one.
-query.delta_time | Returns the time in seconds since the previous frame
-query.distance_from_camera | Returns the distance of the root of this actor or particle emitter from the camera
-query.effect_emitter_count | Returns the total number of active emitters of the callee's particle effect type
-query.effect_particle_count | Returns the total number of active particles of the callee's particle effect type
-query.equipment_count | Returns the equipment count for an actor
-query.equipped_item_all_tags | Takes a slot name followed by any tag you want to check for in the form of 'tag_name' and returns 1 if all of the tags are on that equipped item, 0 otherwise
-query.equipped_item_any_tag | Takes a slot name followed by any tag you want to check for in the form of 'tag_name' and returns 0 if none of the tags are on that equipped item or 1 if at least 1 tag exists
+query.delta_time | Returns the time in seconds since the previous frame.
+query.distance_from_camera | Returns the distance of the root of this actor or particle emitter from the camera.
+query.effect_emitter_count | Returns the total number of active emitters of the callee's particle effect type.
+query.effect_particle_count | Returns the total number of active particles of the callee's particle effect type.
+query.equipment_count | Returns the equipment count for an actor.
+query.equipped_item_all_tags | Takes a slot name followed by any tag you want to check for in the form of 'tag_name' and returns 1 if all of the tags are on that equipped item, 0 otherwise.
+query.equipped_item_any_tag | Takes a slot name followed by any tag you want to check for in the form of 'tag_name' and returns 0 if none of the tags are on that equipped item or 1 if at least 1 tag exists.
 query.equipped_item_is_attachable | Takes the desired hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and returns whether the item is an attachable or not.
 query.eye_target_x_rotation | Returns the X eye rotation of the entity if it makes sense, else it returns 0.0.
 query.eye_target_y_rotation | Returns the Y eye rotation of the entity if it makes sense, else it returns 0.0.
@@ -157,7 +157,7 @@ query.is_selected_item | Returns true if the player has selected an item in the 
 query.is_shaking | Returns 1.0 if the entity is casting, else it returns 0.0.
 query.is_shaking_wetness | Returns 1.0 if the entity is shaking water off, else it returns 0.0.
 query.is_sheared | Returns 1.0 if the entity is able to be sheared and is sheared, else it returns 0.0.
-query.is_shield_powered	| Returns 1.0f if the entity has an active powered shield if it makes sense, else it returns 0.0.
+query.is_shield_powered	| Returns 1.0 if the entity has an active powered shield if it makes sense, else it returns 0.0.
 query.is_silent	| Returns 1.0 if the entity is silent, else it returns 0.0.
 query.is_sitting | Returns 1.0 if the entity is sitting, else it returns 0.0.
 query.is_sleeping | Returns 1.0 if the entity is sleeping, else it returns 0.0.
@@ -180,71 +180,71 @@ query.item_is_charged | Takes one optional hand slot as a parameter (0 or 'main_
 query.item_max_use_duration | Returns the maximum amount of time the item can be used, else 0.0 if it doesn't make sense
 query.item_remaining_use_duration | Returns the amount of time an item has left to use, else 0.0 if it doesn't make sense. Item queried is specified by the slot name 'main_hand' or 'off_hand'. Time remaining is normalized using the normalization value, only if one is given, else it is returned in seconds.
 query.item_slot_to_bone_name | Requires one parameter: the name of the equipment slot. This function returns the name of the bone this entity has mapped to that slot.
-query.key_frame_lerp_time | Returns the ratio between the previous and next key frames
+query.key_frame_lerp_time | Returns the ratio between the previous and next key frames.
 query.last_frame_time | Returns the time in seconds of the last frame. If an argument is passed, it is assumed to be the number of frames in the past that you wish to query. 'query.last_frame_time' (or the equivalent 'query.last_frame_time(0)') will return the frame time of the frame before the current one. 'query.last_frame_time(1)' will return the frame time of two frames ago. Currently we store the history of the last 30 frames, although note that this may change in the future. Passing an index more than the available data will return the oldest frame stored.
 query.last_hit_by_player | Returns 1.0 if the entity was last hit by the player, else it returns 0.0. If called by the client always returns 0.0.
-query.lie_amount | Returns the lie down amount for the entity
-query.life_span	| Returns the limited life span of an entity, or 0.0 if it lives forever
-query.life_time	| Returns the time in seconds since the current animation started, else 0.0 if not called within an animation
+query.lie_amount | Returns the lie down amount for the entity.
+query.life_span	| Returns the limited life span of an entity, or 0.0 if it lives forever.
+query.life_time	| Returns the time in seconds since the current animation started, else 0.0 if not called within an animation.
 query.lod_index	| Takes an array of distances and returns the zero - based index of which range the actor is in based on distance from the camera. For example, 'query.lod_index(10, 20, 30)' will return 0, 1, or 2 based on whether the mob is less than 10, 20, or 30 units away from the camera, or it will return 3 if it is greater than 30.
 query.log | Debug log a value to the content log.
 query.main_hand_item_max_duration | Returns the use time maximum duration for the main hand item if it makes sense, else it returns 0.0.
 query.main_hand_item_use_duration | Returns the use time for the main hand item.
-query.mark_variant | Returns the entity's mark variant
-query.max_durability | Returns the max durability an item can take
+query.mark_variant | Returns the entity's mark variant.
+query.max_durability | Returns the max durability an item can take.
 query.max_health | Returns the maximum health of the entity, or 0.0 if it doesn't make sense to call on this entity.
 query.max_trade_tier | Returns the maximum trade tier of the entity if it makes sense, else it returns 0.0.
 query.maximum_frame_time | Returns the time in seconds of the most expensive frame over the last 'n' frames. If an argument is passed, it is assumed to be the number of frames in the past that you wish to query. 'query.maximum_frame_time' (or the equivalent 'query.maximum_frame_time(0)') will return the frame time of the frame before the current one. 'query.maximum_frame_time(1)' will return the maximum frame time of the previous two frames. Currently we store the history of the last 30 frames, although note that this may change in the future. Asking for more frames will result in only sampling the number of frames stored.
 query.minimum_frame_time | Returns the time in seconds of the least expensive frame over the last 'n' frames. If an argument is passed, it is assumed to be the number of frames in the past that you wish to query. 'query.minimum_frame_time' (or the equivalent 'query.minimum_frame_time(0)') will return the frame time of the frame before the current one. 'query.minimum_frame_time(1)' will return the minimum frame time of the previous two frames. Currently we store the history of the last 30 frames, although note that this may change in the future. Asking for more frames will result in only sampling the number of frames stored.
-query.model_scale | Returns the scale of the current entity
-query.modified_distance_moved | Returns the total distance the entity has moved horizontally in meters (since the entity was last loaded, not necessarily since it was originally created) modified along the way by status flags such as is_baby or on_fire
-query.modified_move_speed | Returns the current walk speed of the entity modified by status flags such as is_baby or on_fire
+query.model_scale | Returns the scale of the current entity.
+query.modified_distance_moved | Returns the total distance the entity has moved horizontally in meters (since the entity was last loaded, not necessarily since it was originally created) modified along the way by status flags such as is_baby or on_fire.
+query.modified_move_speed | Returns the current walk speed of the entity modified by status flags such as is_baby or on_fire.
 query.moon_brightness | Returns the brightness of the moon (FULL_MOON=1.0, WANING_GIBBOUS=0.75, FIRST_QUARTER=0.5, WANING_CRESCENT=0.25, NEW_MOON=0.0, WAXING_CRESCENT=0.25, LAST_QUARTER=0.5, WAXING_GIBBOUS=0.75).
 query.moon_phase | Returns the phase of the moon (FULL_MOON=0, WANING_GIBBOUS=1, FIRST_QUARTER=2, WANING_CRESCENT=3, NEW_MOON=4, WAXING_CRESCENT=5, LAST_QUARTER=6, WAXING_GIBBOUS=7).
-query.movement_direction | Returns the specified axis of the normalized position delta of the entity
-query.noise | Queries Perlin Noise Map
+query.movement_direction | Returns the specified axis of the normalized position delta of the entity.
+query.noise | Queries Perlin Noise Map.
 query.on_fire_time | Returns the time that the entity is on fire, else it returns 0.0.
 query.out_of_control | Returns 1.0 if the entity is out of control, else it returns 0.0.
-query.overlay_alpha | **DEPRECATED** (Do not use - this function is deprecated and will be removed)
+query.overlay_alpha | **DEPRECATED** (Do not use - this function is deprecated and will be removed).
 query.owner_identifier | **DEPRECATED** (Use query.is_owner_identifier_any instead if possible so names can be changed later without breaking content.) Returns the root actor identifier.
-query.player_level | Returns the players level if the actor is a player, otherwise returns 0
+query.player_level | Returns the players level if the actor is a player, otherwise returns 0.
 query.position | Returns the absolute position of an actor. Takes one argument that represents the desired axis (0 == x-axis, 1 == y-axis, 2 == z-axis).
 query.position_delta | Returns the position delta for an actor. Takes one argument that represents the desired axis (0 == x-axis, 1 == y-axis, 2 == z-axis).
-query.previous_squish_value | Returns the previous squish value for the current entity, or 0.0 if this doesn't make sense
-query.remaining_durability | Returns the how much durability an item has remaining
-query.roll_counter | Returns the roll counter of the entity
-query.rotation_to_camera | Returns the rotation required to aim at the camera. Requires one argument representing the rotation axis you would like (0 for x, 1 for y)
+query.previous_squish_value | Returns the previous squish value for the current entity, or 0.0 if this doesn't make sense.
+query.remaining_durability | Returns the how much durability an item has remaining.
+query.roll_counter | Returns the roll counter of the entity.
+query.rotation_to_camera | Returns the rotation required to aim at the camera. Requires one argument representing the rotation axis you would like (0 for x, 1 for y).
 query.shake_angle | Returns the shaking angle of the entity if it makes sense, else it returns 0.0.
 query.shake_time | Returns the shake time of the entity.
 query.shield_blocking_bob | Returns the how much the offhand shield should translate down when blocking and being hit.
 query.show_bottom | Returns 1.0 if we render the entity's bottom, else it returns 0.0.
-query.sit_amount | Returns the current sit amount of the entity
-query.skin_id | Returns the entity's skin ID
+query.sit_amount | Returns the current sit amount of the entity.
+query.skin_id | Returns the entity's skin ID.
 query.sleep_rotation | Returns the rotation of the bed the player is sleeping on.
-query.sneeze_counter | Returns the sneeze counter of the entity
+query.sneeze_counter | Returns the sneeze counter of the entity.
 query.spellcolor | Returns a struct representing the entity spell color for the specified entity. The struct contains '.r' '.g' '.b' and '.a' members, each 0.0 to 1.0. If no actor is specified, each member value will be 0.0.
 query.standing_scale | Returns the scale of how standing up the entity is
 query.structural_integrity | Returns the structural integrity for the actor, otherwise returns 0
 query.surface_particle_color | Returns the particle color for the block located in the surface below the actor (scanned up to 10 blocks down). The struct contains '.r' '.g' '.b' and '.a' members, each 0.0 to 1.0. If no actor is specified or if no surface is found, each member value is set to 0.0. Available on the Client (Resource Packs) only.
 query.surface_particle_texture_coordinate | Returns the texture coordinate for generating particles for the block located in the surface below the actor (scanned up to 10 blocks down) in a struct with 'u' and 'v' keys. If no actor is specified or if no surface is found, u and v will be 0.0. Available on the Client (Resource Packs) only.
 query.surface_particle_texture_size | Returns the texture size for generating particles for the block located in the surface below the actor (scanned up to 10 blocks down). If no actor is specified or if no surface is found, each member value will be 0.0. Available on the Client (Resource Packs) only.
-query.swell_amount | Returns how swollen the entity is
+query.swell_amount | Returns how swollen the entity is.
 query.swelling_dir | Returns the swelling direction of the entity if it makes sense, else it returns 0.0.
 query.swim_amount | Returns the amount the current entity is swimming.
 query.tail_angle | Returns the angle of the tail of the entity if it makes sense, else it returns 0.0.
 query.target_x_rotation	| Returns the x rotation required to aim at the entity's current target if it has one, else it returns 0.0.
 query.target_y_rotation	| Returns the y rotation required to aim at the entity's current target if it has one, else it returns 0.0.
-query.texture_frame_index | Returns the icon index of the experience orb
+query.texture_frame_index | Returns the icon index of the experience orb.
 query.time_of_day | Returns the time of day (midnight=0.0, sunrise=0.25, noon=0.5, sunset=0.75) of the dimension the entity is in.
 query.time_since_last_vibration_detection | Returns the time in seconds since the last vibration detected by the actor. On errors or if no vibration has been detected yet, returns -1. Available on the Client (Resource Packs) only.
-query.time_stamp | Returns the current time stamp of the level
-query.total_emitter_count | Returns the total number of active emitters in the world
-query.total_particle_count | Returns the total number of active particles in the world
+query.time_stamp | Returns the current time stamp of the level.
+query.total_emitter_count | Returns the total number of active emitters in the world.
+query.total_particle_count | Returns the total number of active particles in the world.
 query.trade_tier | Returns the trade tier of the entity if it makes sense, else it returns 0.0.
-query.unhappy_counter | Returns how unhappy the entity is
-query.variant | Returns the entity's variant index
-query.vertical_speed | Returns the speed of the entity up or down in meters/second, where positive is up
+query.unhappy_counter | Returns how unhappy the entity is.
+query.variant | Returns the entity's variant index.
+query.vertical_speed | Returns the speed of the entity up or down in meters/second, where positive is up.
 query.walk_distance | Returns the walk distance of the entity.
-query.wing_flap_position | Returns the wing flap position of the entity, or 0.0 if this doesn't make sense
-query.wing_flap_speed | Returns the wing flap speed of the entity, or 0.0 if this doesn't make sense
-query.yaw_speed	| Returns the entity's yaw speed
+query.wing_flap_position | Returns the wing flap position of the entity, or 0.0 if this doesn't make sense.
+query.wing_flap_speed | Returns the wing flap speed of the entity, or 0.0 if this doesn't make sense.
+query.yaw_speed	| Returns the entity's yaw speed.
