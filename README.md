@@ -1,4 +1,5 @@
-# All non-experimental molang queries
+# All non-experimental molang queries 
+```Original Repository By @WhiteOnGithub```
 
 | Name | Description |
 | ---  | ----------- |
